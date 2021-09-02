@@ -1,5 +1,5 @@
-import React, { useCallback, useRef } from "react";
-import Home from "../component/home";
+import React, { useCallback, useRef } from 'react';
+import Home from '../component/home';
 
 // 实现 ref 的转发
 const FancyButton = React.forwardRef((props, ref) => (
@@ -10,7 +10,7 @@ const FancyButton = React.forwardRef((props, ref) => (
 ));
 
 // 父组件中使用子组件的 ref
-function App() {
+function App () {
   const ref = useRef();
   const handleClick = useCallback(() => ref.current.focus(), [ref]);
 

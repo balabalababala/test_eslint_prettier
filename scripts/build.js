@@ -14,7 +14,6 @@ process.on('unhandledRejection', err => {
 // Ensure environment variables are read.
 require('../config/env');
 
-
 const path = require('path');
 const chalk = require('react-dev-utils/chalk');
 const fs = require('fs-extra');
@@ -129,7 +128,7 @@ checkBrowsers(paths.appPath, isInteractive)
   });
 
 // Create the production build and print the deployment instructions.
-function build(previousFileSizes) {
+function build (previousFileSizes) {
   // We used to support resolving modules according to `NODE_PATH`.
   // This now has been deprecated in favor of jsconfig/tsconfig.json
   // This lets you use absolute paths in imports inside large monorepos:
@@ -159,12 +158,12 @@ function build(previousFileSizes) {
         if (Object.prototype.hasOwnProperty.call(err, 'postcssNode')) {
           errMessage +=
             '\nCompileError: Begins at CSS selector ' +
-            err['postcssNode'].selector;
+            err.postcssNode.selector;
         }
 
         messages = formatWebpackMessages({
           errors: [errMessage],
-          warnings: [],
+          warnings: []
         });
       } else {
         messages = formatWebpackMessages(
@@ -197,15 +196,15 @@ function build(previousFileSizes) {
       return resolve({
         stats,
         previousFileSizes,
-        warnings: messages.warnings,
+        warnings: messages.warnings
       });
     });
   });
 }
 
-function copyPublicFolder() {
+function copyPublicFolder () {
   fs.copySync(paths.appPublic, paths.appBuild, {
     dereference: true,
-    filter: file => file !== paths.appHtml,
+    filter: file => file !== paths.appHtml
   });
 }

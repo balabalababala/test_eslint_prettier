@@ -1,9 +1,26 @@
 module.exports = {
   "env": {
-    "browser": true,
-    "node": true,
-    "commonjs": true
+    // "browser": true,
+    // "node": true,
+    // "commonjs": true,
+    es6: true,
+    node: true,
   },
+  extends: [
+    'plugin:import/errors',
+    'plugin:import/warnings',
+  ],
+  plugins: [
+    'import',
+    'react',
+    'react-hooks'
+  ],
+  parser: "@typescript-eslint/parser",
+
+  parserOptions: {
+    sourceType: 'module'
+  },
+
   "ecmaFeatures": {
     // lambda表达式
     "arrowFunctions": true,
@@ -234,7 +251,7 @@ module.exports = {
     "quote-props": 0,
     "quotes": [2, "single", "avoid-escape"],
     "radix": 2,
-    "semi": [2, "never"],
+    "semi": [2, "always"],
     "semi-spacing": 0,
     "sort-vars": 0,
     "space-after-keywords": [2, "always"],

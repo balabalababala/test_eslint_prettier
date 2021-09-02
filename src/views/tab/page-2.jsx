@@ -1,12 +1,12 @@
-import React from "react";
-import { useEffect } from "react";
+import { useEffect } from React from "react";
+
 
 const TopBarComponent = (props) => {
-  const onShow = props.onShow;
+  const onShow = props.onShow
   useEffect(() => {
-    onShow && console.log("2");
-  }, [onShow]);
-  return <div>page-2</div>;
+    onShow && console.log('2');
+  }, [onShow])
+  return <div>page-2</div>
 };
 
-export default TopBarComponent;
+export default TopBarComponent

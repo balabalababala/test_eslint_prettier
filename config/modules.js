@@ -11,7 +11,7 @@ const resolve = require('resolve');
  *
  * @param {Object} options
  */
-function getAdditionalModulePaths(options = {}) {
+function getAdditionalModulePaths (options = {}) {
   const baseUrl = options.baseUrl;
 
   // We need to explicitly check for null and undefined (and not a falsy value) because
@@ -61,7 +61,7 @@ function getAdditionalModulePaths(options = {}) {
  *
  * @param {*} options
  */
-function getWebpackAliases(options = {}) {
+function getWebpackAliases (options = {}) {
   const baseUrl = options.baseUrl;
 
   if (!baseUrl) {
@@ -72,7 +72,7 @@ function getWebpackAliases(options = {}) {
 
   if (path.relative(paths.appPath, baseUrlResolved) === '') {
     return {
-      src: paths.appSrc,
+      src: paths.appSrc
     };
   }
 }
@@ -82,7 +82,7 @@ function getWebpackAliases(options = {}) {
  *
  * @param {*} options
  */
-function getJestAliases(options = {}) {
+function getJestAliases (options = {}) {
   const baseUrl = options.baseUrl;
 
   if (!baseUrl) {
@@ -93,12 +93,12 @@ function getJestAliases(options = {}) {
 
   if (path.relative(paths.appPath, baseUrlResolved) === '') {
     return {
-      '^src/(.*)$': '<rootDir>/src/$1',
+      '^src/(.*)$': '<rootDir>/src/$1'
     };
   }
 }
 
-function getModules() {
+function getModules () {
   // Check if TypeScript is setup
   const hasTsConfig = fs.existsSync(paths.appTsConfig);
   const hasJsConfig = fs.existsSync(paths.appJsConfig);
@@ -116,7 +116,7 @@ function getModules() {
   // based on tsconfig.json
   if (hasTsConfig) {
     const ts = require(resolve.sync('typescript', {
-      basedir: paths.appNodeModules,
+      basedir: paths.appNodeModules
     }));
     config = ts.readConfigFile(paths.appTsConfig, ts.sys.readFile).config;
     // Otherwise we'll check if there is jsconfig.json
@@ -134,7 +134,7 @@ function getModules() {
     additionalModulePaths: additionalModulePaths,
     webpackAliases: getWebpackAliases(options),
     jestAliases: getJestAliases(options),
-    hasTsConfig,
+    hasTsConfig
   };
 }
 

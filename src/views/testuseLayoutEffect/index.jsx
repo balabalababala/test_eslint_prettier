@@ -1,11 +1,11 @@
-import React, { useLayoutEffect, useState, useEffect } from "react";
-import Home from "../component/home";
-import "./index.css";
+import React, { useLayoutEffect, useState, useEffect } from 'react';
+import Home from '../component/home';
+import './index.css';
 
 const count = 5000;
 
 export default function () {
-  const [className, setClassName] = useState("red");
+  const [className, setClassName] = useState('red');
 
   // 打开先看到red，要等console输出完，才能看到green
   // useEffect(() => {
@@ -20,7 +20,7 @@ export default function () {
     for (let i = 0; i < count; i++) {
       console.log(i);
     }
-    setClassName("green");
+    setClassName('green');
   }, []);
 
   return (
