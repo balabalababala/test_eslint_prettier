@@ -9,7 +9,7 @@ module.exports = {
   extends: [
     'plugin:import/errors', // 集成一个个配置方案的最佳实践，在eslint-plugin-import的readme中看规则
     'plugin:import/warnings',
-    'eslint-plugin-react/recommended',
+    // 'eslint-plugin-react/recommended',
   ],
   plugins: [
     'import', // eslint-plugin-import
