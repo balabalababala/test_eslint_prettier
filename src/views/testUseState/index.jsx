@@ -1,29 +1,29 @@
-import React, { useState } from "react";
-import Home from "../component/home";
+import React, { useState } from 'react';
+import Home from '../component/home';
 
 const useRandomColor = (initColor) => {
-  console.log("initColor", initColor);
+  console.log('initColor', initColor);
   const [color, setColor] = useState(initColor);
   const handleRandom = () => {
-    //随机颜色
-    const randomColor = "#" + Math.random().toString(16).slice(2, 8);
+    // 随机颜色
+    const randomColor = '#' + Math.random().toString(16).slice(2, 8);
     // setColor(randomColor);
-    setColor(prevColor => "#" + Math.random().toString(16).slice(2, 8))
+    setColor(prevColor => '#' + Math.random().toString(16).slice(2, 8));
   };
-  console.log("color", color);
+  console.log('color', color);
   return [color, handleRandom];
 };
 
-function Com1() {
-  const [color, handleRandom] = useRandomColor("red");
-  const [color2, handleRandom2] = useRandomColor("red");
+function Com1 () {
+  const [color, handleRandom] = useRandomColor('red');
+  const [color2, handleRandom2] = useRandomColor('red');
   return (
     <div>
-      <div style={{ backgroundColor: color, padding: 50, textAlign: "center" }}>
+      <div style={{ backgroundColor: color, padding: 50, textAlign: 'center' }}>
         <button onClick={handleRandom}>点击换色</button>
       </div>
       <div
-        style={{ backgroundColor: color2, padding: 50, textAlign: "center" }}
+        style={{ backgroundColor: color2, padding: 50, textAlign: 'center' }}
       >
         <button onClick={handleRandom2}>点击换色</button>
       </div>
@@ -31,13 +31,13 @@ function Com1() {
   );
 }
 
-function Com2() {
-  const [color, handleRandom] = useRandomColor("red");
+function Com2 () {
+  const [color, handleRandom] = useRandomColor('red');
   const handleClick = () => {
     setInterval(handleRandom, 1000);
   };
   return (
-    <div style={{ backgroundColor: color, padding: 50, textAlign: "center" }}>
+    <div style={{ backgroundColor: color, padding: 50, textAlign: 'center' }}>
       <button onClick={handleClick}>点击换色</button>
     </div>
   );

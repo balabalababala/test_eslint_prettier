@@ -79,6 +79,21 @@ module.exports = {
     "experimentalObjectRestSpread": true
   },
 
+  "globals": {
+    "window": true,
+    "document": true,
+    "navigator": true,
+    "fetch": true,
+  },
+
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+
   "rules": {
     // 定义对象的set存取器属性时，强制定义get
     "accessor-pairs": 2,
@@ -89,7 +104,7 @@ module.exports = {
     // if while function 后面的{必须与if在同一行，java风格。
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
     // 双峰驼命名格式
-    "camelcase": 2,
+    "camelcase": 1,
     // 数组和对象键值对最后一个逗号， never参数：不能带末尾的逗号, always参数：必须带末尾的逗号，
     // always-multiline：多行模式必须带逗号，单行模式不能带逗号
     "comma-dangle": [2, "never"],
@@ -99,7 +114,7 @@ module.exports = {
     // http://eslint.org/docs/rules/comma-style
     "comma-style": [2, "last"],
     // 圈复杂度
-    "complexity": [2, 9],
+    "complexity": [1, 9],
     // 以方括号取对象属性时，[ 后面和 ] 前面是否需要空格, 可选参数 never, always
     "computed-property-spacing": [2, "never"],
     // 强制方法必须返回值，TypeScript强类型，不配置
@@ -168,7 +183,7 @@ module.exports = {
     "no-else-return": 0,
     "no-empty": 0,
     "no-empty-character-class": 2,
-    "no-empty-label": 2,
+    // "no-empty-label": 2,
     "no-eq-null": 0,
     "no-eval": 2,
     "no-ex-assign": 2,
@@ -236,7 +251,7 @@ module.exports = {
     "no-unneeded-ternary": 2,
     "no-unreachable": 2,
     "no-unused-expressions": 0,
-    "no-unused-vars": [2, { "vars": "all", "args": "none" }],
+    "no-unused-vars": [1, { "vars": "all", "args": "none" }],
     "no-use-before-define": 0,
     "no-var": 0,
     "no-void": 0,
@@ -251,16 +266,16 @@ module.exports = {
     "prefer-const": 0,
     "quote-props": 0,
     "quotes": [2, "single", "avoid-escape"],
-    "radix": 2,
+    "radix": 1, // parseInt 缺少基数参数基数
     "semi": [2, "always"],
     "semi-spacing": 0,
     "sort-vars": 0,
-    "space-after-keywords": [2, "always"],
+    // "space-after-keywords": [2, "always"], // Rule 'space-after-keywords' was removed and replaced by: keyword-spacing
     "space-before-blocks": [2, "always"],
     "space-before-function-paren": [2, "always"],
     "space-in-parens": [2, "never"],
     "space-infix-ops": 2,
-    "space-return-throw-case": 2,
+    // "space-return-throw-case": 2, // Rule 'space-return-throw-case' was removed and replaced by: keyword-spacing
     "space-unary-ops": [2, { "words": true, "nonwords": false }],
     "spaced-comment": [2, "always", { "markers": ["global", "globals", "eslint", "eslint-disable", "*package", "!"] }],
     "strict": 0,

@@ -2,8 +2,8 @@ import React, {
   useImperativeHandle,
   useRef,
   useState,
-  useCallback,
-} from "react";
+  useCallback
+} from 'react';
 
 const FancyInput = React.forwardRef((props, ref) => {
   const [fresh, setFresh] = useState(false);
@@ -12,7 +12,7 @@ const FancyInput = React.forwardRef((props, ref) => {
     ref,
     () => ({
       attRef,
-      fresh,
+      fresh
     }),
     [fresh]
   );

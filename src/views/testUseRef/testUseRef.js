@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useMemo, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 const set = new Set();
 const arr = [];
 window.mySet = set;
 window.myArr = arr;
 
-export default function App(props) {
+export default function App (props) {
   const [count, setCount] = useState(0);
 
   const doubleCount = useMemo(() => {
@@ -14,7 +14,7 @@ export default function App(props) {
   const counterRef = useRef();
   const myConst = useRef({ a: Math.random(), b: function () {} }); // 可以用来保存常量
 
-  console.log('counterRef:', counterRef)
+  console.log('counterRef:', counterRef);
 
   useEffect(() => {
     document.title = `The value is ${count}`;
