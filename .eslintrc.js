@@ -7,13 +7,14 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:import/errors',
+    'plugin:import/errors', // 集成一个个配置方案的最佳实践，在eslint-plugin-import的readme中看规则
     'plugin:import/warnings',
+    'eslint-plugin-react/recommended',
   ],
   plugins: [
-    'import',
-    'react',
-    'react-hooks'
+    'import', // eslint-plugin-import
+    'react', // eslint-plugin-react
+    'react-hooks', //eslint-plugin-react-hooks
   ],
   parser: "@typescript-eslint/parser",
 
