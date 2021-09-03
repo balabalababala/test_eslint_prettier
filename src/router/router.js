@@ -1,19 +1,19 @@
-import React from 'react';
-import { HashRouter, Route, Switch, BrowserRouter } from 'react-router-dom';
-import Home from '../views/home';
-import TestUseRef from '../views/testUseRef';
-import TestUseState from '../views/testUseState';
-import TestUseCallback from '../views/testUseCallback';
-import TestUseEffect from '../views/testUseEffect';
-import TestUseContext from '../views/testUseContext';
-import TestUseReducer from '../views/testUseReducer';
-import TestUseMemo from '../views/testUseMemo';
-import TestUseImperativeHandle from '../views/testUseImperativeHandle';
-import WithoutHook from '../views/withoutHook';
-import TestUseLayoutEffect from '../views/testuseLayoutEffect';
-import TestSlotSimilar from '../views/testSlotSimilar';
+import React from "react";
+import { HashRouter, Route, Switch, BrowserRouter } from "react-router-dom";
+import Home from "../views/home";
+import TestUseRef from "../views/testUseRef";
+import TestUseState from "../views/testUseState";
+import TestUseCallback from "../views/testUseCallback";
+import TestUseEffect from "../views/testUseEffect";
+import TestUseContext from "../views/testUseContext";
+import TestUseReducer from "../views/testUseReducer";
+import TestUseMemo from "../views/testUseMemo";
+import TestUseImperativeHandle from "../views/testUseImperativeHandle";
+import WithoutHook from "../views/withoutHook";
+import TestUseLayoutEffect from "../views/testuseLayoutEffect";
+import TestSlotSimilar from "../views/testSlotSimilar";
 // import Temp from "../views/temp";
-import TabBar from '../views/tab';
+import TabBar from "../views/tab";
 
 const BasicRoute = () => (
   <React.StrictMode>

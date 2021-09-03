@@ -1,12 +1,12 @@
-import React, { useImperativeHandle, useRef } from 'react';
-import Home from '../component/home';
+import React, { useImperativeHandle, useRef } from "react";
+import Home from "../component/home";
 
 const FancyInput = React.forwardRef((props, ref) => {
   const inputRef = useRef();
   useImperativeHandle(ref, () => ({
     focus: () => {
       inputRef.current.focus();
-    }
+    },
   }));
 
   return <input ref={inputRef} type="text" />;

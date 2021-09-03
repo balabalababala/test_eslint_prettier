@@ -1,16 +1,16 @@
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 
 import {
   HashRouter as Router,
   Link,
   Route,
-  BrowserRouter
-} from 'react-router-dom';
+  BrowserRouter,
+} from "react-router-dom";
 
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App () {
+function App() {
   return (
     <div className="App">
       <ul className="menu">

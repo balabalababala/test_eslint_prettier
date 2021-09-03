@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Home from '../component/home';
+import React, { useState, useEffect } from "react";
+import Home from "../component/home";
 
-function Example () {
+function Example() {
   const [count, setCount] = useState(0);
   const [count1, setCount1] = useState(0);
 
@@ -14,28 +14,32 @@ function Example () {
   }, [count]);
 
   useEffect(() => {
-    console.log(11111 + ':' + count + ':' + count1);
+    console.log(11111 + ':' + count + ':' + count1)
     const timer = setInterval(() => {
-      console.log(22222 + ':' + count + ':' + count1); // 这里始终是 0 0
-      setRandom(new Date().toString());
+      console.log(22222 + ':' + count + ':' + count1) // 这里始终是 0 0
+      setRandom(new Date().toString())
     }, 2000);
     return function () {
-      console.log(33333 + ':' + count + ':' + count1); // 这里始终是 0 0
-      clearInterval(timer);
-    };
-  }, [count]);
+      console.log(33333 + ':' + count + ':' + count1) // 这里始终是 0 0
+      clearInterval(timer)
+    }
+  }, [count])
+
+
 
   useEffect(() => {
-    console.log('a' + ':' + count + ':' + count1);
+    console.log('a' + ':' + count + ':' + count1)
     const timer = setInterval(() => {
-      console.log('b' + ':' + count + ':' + count1); // 这里始终是 0 0
-      setRandom(new Date().toString());
+      console.log('b' + ':' + count + ':' + count1) // 这里始终是 0 0
+      setRandom(new Date().toString())
     }, 2000);
     return function () {
-      console.log('c' + ':' + count + ':' + count1); // 这里始终是 0 0
-      clearInterval(timer);
-    };
-  });
+      console.log('c' + ':' + count + ':' + count1) // 这里始终是 0 0
+      clearInterval(timer)
+    }
+  })
+
+
 
   const [count3, setCount3] = useState(0);
 
@@ -58,7 +62,7 @@ function Example () {
         <p>You clicked {count3} times</p>
         <button onClick={() => setCount3(count3 + 1)}>
           Click me
-        </button>
+      </button>
       </div>
     </div>
   );

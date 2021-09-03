@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import Home from '../component/home';
+import React, { useState, useCallback, useEffect } from "react";
+import Home from "../component/home";
 
 window.arr = [];
 window.arr2 = [];
@@ -8,14 +8,14 @@ export default function () {
   let [num, setNum] = useState(0);
 
   const callback = useCallback(() => {
-    console.log('callback [num]', num);
+    console.log("callback [num]", num);
   }, [num]);
 
   callback();
 
   const callback1 = useCallback(() => {
-    console.log('callback1 []:', num);
-    return 'from callback1';
+    console.log("callback1 []:", num);
+    return "from callback1";
   }, []);
 
   callback1();
@@ -23,8 +23,8 @@ export default function () {
   window.arr2.push(callback1);
 
   const callback3 = () => {
-    console.log('callback3 []:', num);
-    return 'from callback3';
+    console.log("callback3 []:", num);
+    return "from callback3";
   };
 
   window.arr.push(callback3);
@@ -35,7 +35,7 @@ export default function () {
   const callback4 = useCallback(
     ((r) => {
       return () => {
-        console.log('callback4 []:', r, num);
+        console.log("callback4 []:", r, num);
       };
     })(Math.random()),
     []
@@ -44,16 +44,16 @@ export default function () {
   const callback5 = useCallback(
     ((r) => {
       return () => {
-        console.log('callback5 []:', r, num);
+        console.log("callback5 []:", r, num);
       };
     })(Math.random()),
     [num]
   );
 
   const callback6 = useCallback(() => {
-    console.log('callback6 []:', num);
+    console.log("callback6 []:", num);
     setNum(Math.random());
-    return 'from callback6';
+    return "from callback6";
   }, []);
   return (
     <div>

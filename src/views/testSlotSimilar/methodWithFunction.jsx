@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const Wrap3 = (props) => {
   const info = props.children;
-  return <div>{info('This Is Name', 32)}</div>;
+  return <div>{info("This Is Name", 32)}</div>;
 };
 
 class View extends React.Component {
-  render () {
+  render() {
     return (
       <Wrap3>
         {(name, age) => {
