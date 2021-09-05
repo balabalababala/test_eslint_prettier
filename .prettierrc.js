@@ -33,7 +33,7 @@ module.exports = {
 
   jsxBracketSameLine: false, // 在jsx中把'>' 单独放一行
   jsxSingleQuote: false, // 在jsx中使用单引号代替双引号
-  parser: 'babylon', // 格式化的解析器，默认是babylon
+  // parser: 'babylon', // 格式化的解析器，默认是babylon   加上这条，会导致末尾的分号加不上去
   requireConfig: false, // Require a 'prettierconfig' to format prettier
   stylelintIntegration: false, //不让prettier使用stylelint的代码格式进行校验
   trailingComma: 'es5', // 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
