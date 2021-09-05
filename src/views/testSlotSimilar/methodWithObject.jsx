@@ -10,12 +10,12 @@ const Wrap2 = (props) => {
 };
 
 class View extends React.Component {
-  render() {
+  render () {
     return (
       <Wrap2>
         {{
           son: <div>我是儿子</div>,
-          daughter: <div>我是女儿</div>,
+          daughter: <div>我是女儿</div>
         }}
       </Wrap2>
     );

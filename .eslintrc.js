@@ -275,7 +275,7 @@ module.exports = {
     "sort-vars": 0,
     // "space-after-keywords": [2, "always"], // Rule 'space-after-keywords' was removed and replaced by: keyword-spacing
     "space-before-blocks": [2, "always"],
-    "space-before-function-paren": [0, "always"], // 这一条会和prettier冲突
+    "space-before-function-paren": [1, "always"], // 这一条会和prettier冲突
     "space-in-parens": [2, "never"],
     "space-infix-ops": 2,
     // "space-return-throw-case": 2, // Rule 'space-return-throw-case' was removed and replaced by: keyword-spacing
