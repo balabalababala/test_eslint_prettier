@@ -14,7 +14,7 @@ const useRandomColor = (initColor) => {
   return [color, handleRandom];
 };
 
-function Com1 () {
+function Com1() {
   const [color, handleRandom] = useRandomColor('red');
   const [color2, handleRandom2] = useRandomColor('red');
   return (
@@ -31,7 +31,7 @@ function Com1 () {
   );
 }
 
-function Com2 () {
+function Com2() {
   const [color, handleRandom] = useRandomColor('red');
   const handleClick = () => {
     setInterval(handleRandom, 1000);
@@ -43,7 +43,7 @@ function Com2 () {
   );
 }
 
-export default function () {
+export default function() {
   return (
     <div>
       <Home />

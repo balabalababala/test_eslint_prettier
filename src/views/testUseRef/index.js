@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import View from './testUseRef';
 import Home from '../component/home';
 
-export default function App (props) {
+export default function App(props) {
   const [show, setShow] = useState(false);
   return (
     <>

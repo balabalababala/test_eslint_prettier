@@ -25,7 +25,7 @@ const App = (props) => {
   );
 };
 
-export default function () {
+export default function() {
   return (
     <div>
       <h1>new Demo</h1>

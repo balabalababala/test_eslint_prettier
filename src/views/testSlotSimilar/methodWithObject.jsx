@@ -10,7 +10,7 @@ const Wrap2 = (props) => {
 };
 
 class View extends React.Component {
-  render () {
+  render() {
     return (
       <Wrap2>
         {{

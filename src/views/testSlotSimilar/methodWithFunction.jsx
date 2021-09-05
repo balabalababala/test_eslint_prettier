@@ -6,7 +6,7 @@ const Wrap3 = (props) => {
 };
 
 class View extends React.Component {
-  render () {
+  render() {
     return (
       <Wrap3>
         {(name, age) => {

@@ -4,7 +4,7 @@ import Home from '../component/home';
 window.arr = [];
 window.arr2 = [];
 
-export default function () {
+export default function() {
   let [num, setNum] = useState(0);
 
   const callback = useCallback(() => {

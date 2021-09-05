@@ -12,7 +12,7 @@ import {
 import React from 'react';
 import './App.css';
 
-function Home () {
+function Home() {
   return (
     <div className="App">
       <ul className="menu">

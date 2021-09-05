@@ -15,7 +15,7 @@ const themes = {
 const ThemeContext = React.createContext(themes.light);
 // const ThemeContext = React.createContext(); // 默认值为空，必须用 Provider 包裹子组件，提供value属性，子组件才能取到context中的值
 
-function App () {
+function App() {
   return (
     <>
       {/* <ThemeContext.Provider value={themes.light}> */}
@@ -26,7 +26,7 @@ function App () {
   );
 }
 
-function Toolbar (props) {
+function Toolbar(props) {
   return (
     <div>
       <ThemedButton />
@@ -34,7 +34,7 @@ function Toolbar (props) {
   );
 }
 
-function ThemedButton () {
+function ThemedButton() {
   const theme = useContext(ThemeContext);
   return (
     <button style={{ background: theme.background, color: theme.foreground }}>
@@ -43,7 +43,7 @@ function ThemedButton () {
   );
 }
 
-export default function () {
+export default function() {
   return (
     <div>
       <Home />

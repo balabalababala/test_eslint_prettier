@@ -4,7 +4,7 @@ const arr = [];
 window.mySet = set;
 window.myArr = arr;
 
-export default function App (props) {
+export default function App(props) {
   const [count, setCount] = useState(0);
 
   const doubleCount = useMemo(() => {
@@ -12,7 +12,7 @@ export default function App (props) {
   }, [count]);
 
   const counterRef = useRef();
-  const myConst = useRef({ a: Math.random(), b: function () {} }); // 可以用来保存常量
+  const myConst = useRef({ a: Math.random(), b: function() {} }); // 可以用来保存常量
 
   console.log('counterRef:', counterRef);
 

@@ -10,7 +10,7 @@ const FancyButton = React.forwardRef((props, ref) => (
 ));
 
 // 父组件中使用子组件的 ref
-function App () {
+function App() {
   const ref = useRef();
   const handleClick = useCallback(() => ref.current.focus(), [ref]);
 
@@ -22,7 +22,7 @@ function App () {
   );
 }
 
-export default function () {
+export default function() {
   return (
     <div>
       <h1>new Demo</h1>

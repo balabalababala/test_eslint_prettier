@@ -1,8 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Home from '../component/home';
 
-function Button ({ name, children }) {
-  function changeName (name) {
+function Button({ name, children }) {
+  function changeName(name) {
     console.log('11');
     return name + '改变name的方法11';
   }
@@ -17,8 +17,8 @@ function Button ({ name, children }) {
   );
 }
 
-function Button2 ({ name, children }) {
-  function changeName (name) {
+function Button2({ name, children }) {
+  function changeName(name) {
     console.log('name 变了，才会调用这个22');
     return name + '改变name的方法22';
   }
@@ -33,7 +33,7 @@ function Button2 ({ name, children }) {
 }
 
 // 使用useEffect + useState 实现 与 button2 等价的效果
-function Button3 ({ name, children }) {
+function Button3({ name, children }) {
   const [otherName, setOtherName] = useState(name);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function Button3 ({ name, children }) {
   );
 }
 
-function App () {
+function App() {
   const [name, setName] = useState('名称');
   const [content, setContent] = useState('内容');
   const [name333, setName333] = useState(name);

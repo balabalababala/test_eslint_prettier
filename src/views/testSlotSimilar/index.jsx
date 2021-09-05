@@ -4,7 +4,7 @@ import Demo1 from './methodWithDom';
 import Demo2 from './methodWithFunction';
 import Demo3 from './methodWithObject';
 
-export default function () {
+export default function() {
   return (
     <div>
       <Demo1 />

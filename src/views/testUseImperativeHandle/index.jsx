@@ -4,7 +4,7 @@ import OldDemo from './oldDemo.jsx';
 import NewDemo from './newDemo.jsx';
 import NewDemo2 from './newDemo2.jsx';
 
-export default function () {
+export default function() {
   return (
     <div>
       <Home />

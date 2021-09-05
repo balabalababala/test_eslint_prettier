@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 class Clock extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {date: new Date()};
   }
 
-  render () {
+  render() {
     return (
       <div>
         <h1>Hello, world!</h1>

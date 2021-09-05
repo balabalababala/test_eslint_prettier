@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Home from '../component/home';
 
-function Example () {
+function Example() {
   const [count, setCount] = useState(0);
   const [count1, setCount1] = useState(0);
 
@@ -19,7 +19,7 @@ function Example () {
       console.log(22222 + ':' + count + ':' + count1); // 这里始终是 0 0
       setRandom(new Date().toString());
     }, 2000);
-    return function () {
+    return function() {
       console.log(33333 + ':' + count + ':' + count1); // 这里始终是 0 0
       clearInterval(timer);
     };
@@ -31,7 +31,7 @@ function Example () {
       console.log('b' + ':' + count + ':' + count1); // 这里始终是 0 0
       setRandom(new Date().toString());
     }, 2000);
-    return function () {
+    return function() {
       console.log('c' + ':' + count + ':' + count1); // 这里始终是 0 0
       clearInterval(timer);
     };
