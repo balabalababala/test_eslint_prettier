@@ -10,7 +10,7 @@ module.exports = {
     'plugin:import/errors', // 集成一个个配置方案的最佳实践，在eslint-plugin-import的readme中看规则
     'plugin:import/warnings',
     // 'eslint-plugin-react/recommended',
-    "plugin:prettier/recommended", // 如果同时使用了eslint和prettier发生冲突了，会关闭掉与prettier有冲突的规则，也就是使用prettier认为对的规则
+    // "plugin:prettier/recommended", // 如果同时使用了eslint和prettier发生冲突了，会关闭掉与prettier有冲突的规则，也就是使用prettier认为对的规则
   ],
   plugins: [
     'import', // eslint-plugin-import
@@ -97,7 +97,7 @@ module.exports = {
   },
 
   "rules": {
-    "prettier/prettier": 2, // 这项配置 对于不符合prettier规范的写法，eslint会提示报错
+    // "prettier/prettier": 2, // 这项配置 对于不符合prettier规范的写法，eslint会提示报错
     // 定义对象的set存取器属性时，强制定义get
     "accessor-pairs": 2,
     // 指定数组的元素之间要以空格隔开(,后面)， never参数：[ 之前和 ] 之后不能带空格，always参数：[ 之前和 ] 之后必须带空格
@@ -268,7 +268,7 @@ module.exports = {
     "padded-blocks": 0,
     "prefer-const": 0,
     "quote-props": 0,
-    "quotes": [1, "single", "avoid-escape"],
+    "quotes": [1, "single", "avoid-escape"], // 使用双引号，prettier中的 singleQuote  规则
     "radix": 1, // parseInt 缺少基数参数基数
     "semi": [2, "always"],
     "semi-spacing": 0,

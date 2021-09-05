@@ -1,10 +1,10 @@
-import React, { useState, useMemo, useEffect } from "react";
-import Home from "../component/home";
+import React, { useState, useMemo, useEffect } from 'react';
+import Home from '../component/home';
 
 function Button({ name, children }) {
   function changeName(name) {
-    console.log("11");
-    return name + "改变name的方法11";
+    console.log('11');
+    return name + '改变name的方法11';
   }
 
   const otherName = changeName(name);
@@ -19,8 +19,8 @@ function Button({ name, children }) {
 
 function Button2({ name, children }) {
   function changeName(name) {
-    console.log("name 变了，才会调用这个22");
-    return name + "改变name的方法22";
+    console.log('name 变了，才会调用这个22');
+    return name + '改变name的方法22';
   }
   // 加入这个，只有name变，组件才会刷新
   const otherName = useMemo(() => changeName(name), [name]);
@@ -37,8 +37,8 @@ function Button3({ name, children }) {
   const [otherName, setOtherName] = useState(name);
 
   useEffect(() => {
-    console.log("33");
-    setOtherName(name + "改变name的方法33");
+    console.log('33');
+    setOtherName(name + '改变name的方法33');
   }, [name]);
 
   return (
@@ -50,8 +50,8 @@ function Button3({ name, children }) {
 }
 
 function App() {
-  const [name, setName] = useState("名称");
-  const [content, setContent] = useState("内容");
+  const [name, setName] = useState('名称');
+  const [content, setContent] = useState('内容');
   const [name333, setName333] = useState(name);
 
   useEffect(() => {

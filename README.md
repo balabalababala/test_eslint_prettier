@@ -1,5 +1,6 @@
 # 说明
 - 需要安装vscode插件 prettier
+- 配置好，如果不生效，可以尝试删除node_modules/.cache目录
 
 
 # prettier 配置

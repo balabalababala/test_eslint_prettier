@@ -3,7 +3,7 @@ import Home from '../component/home';
 
 const initialState = { count: 0 };
 
-function reducer (state, action) {
+function reducer(state, action) {
   switch (action.type) {
     case 'increment':
       return { count: state.count + 1 };

@@ -1,6 +1,6 @@
-import React, { useLayoutEffect, useState, useEffect } from "react";
-import Home from "../component/home";
-import "./index.css";
+import React, { useLayoutEffect, useState, useEffect } from 'react';
+import Home from '../component/home';
+import './index.css';
 
 const count = 100;
 const sleep = async (time) => {
@@ -12,18 +12,18 @@ const sleep = async (time) => {
 };
 
 export default function () {
-  const [className, setClassName] = useState("red");
+  const [className, setClassName] = useState('red');
 
   // 打开先看到red，要等console输出完，才能看到green
   useEffect(async () => {
     await sleep(2000);
-    setClassName("green");
+    setClassName('green');
   }, []);
 
   // 打开要等console输出完，才能看到green
   useLayoutEffect(async () => {
     await sleep(2000);
-    setClassName("red");
+    setClassName('red');
   }, []);
 
   return (
