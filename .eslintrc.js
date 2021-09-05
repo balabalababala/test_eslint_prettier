@@ -10,11 +10,13 @@ module.exports = {
     'plugin:import/errors', // 集成一个个配置方案的最佳实践，在eslint-plugin-import的readme中看规则
     'plugin:import/warnings',
     // 'eslint-plugin-react/recommended',
+    "plugin:prettier/recommended", // 如果同时使用了eslint和prettier发生冲突了，会关闭掉与prettier有冲突的规则，也就是使用prettier认为对的规则
   ],
   plugins: [
     'import', // eslint-plugin-import
     'react', // eslint-plugin-react
     'react-hooks', //eslint-plugin-react-hooks
+    "prettier", // eslint 会使用pretter的规则对代码格式化
   ],
   parser: "@typescript-eslint/parser",
 
@@ -95,6 +97,7 @@ module.exports = {
   },
 
   "rules": {
+    "prettier/prettier": 2, // 这项配置 对于不符合prettier规范的写法，eslint会提示报错
     // 定义对象的set存取器属性时，强制定义get
     "accessor-pairs": 2,
     // 指定数组的元素之间要以空格隔开(,后面)， never参数：[ 之前和 ] 之后不能带空格，always参数：[ 之前和 ] 之后必须带空格
@@ -265,14 +268,14 @@ module.exports = {
     "padded-blocks": 0,
     "prefer-const": 0,
     "quote-props": 0,
-    "quotes": [2, "single", "avoid-escape"],
+    "quotes": [1, "single", "avoid-escape"],
     "radix": 1, // parseInt 缺少基数参数基数
     "semi": [2, "always"],
     "semi-spacing": 0,
     "sort-vars": 0,
     // "space-after-keywords": [2, "always"], // Rule 'space-after-keywords' was removed and replaced by: keyword-spacing
     "space-before-blocks": [2, "always"],
-    "space-before-function-paren": [2, "always"],
+    "space-before-function-paren": [0, "always"], // 这一条会和prettier冲突
     "space-in-parens": [2, "never"],
     "space-infix-ops": 2,
     // "space-return-throw-case": 2, // Rule 'space-return-throw-case' was removed and replaced by: keyword-spacing
