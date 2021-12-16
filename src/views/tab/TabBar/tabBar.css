@@ -3,6 +3,7 @@
   overflow: hidden !important;
   display: none;
 }
+
 .layer {
   min-height: 90vh;
   position: relative;
@@ -39,9 +40,11 @@
   width: 0.38rem;
   height: 0.38rem;
 }
+
 .layer .tab .item .name {
   padding-top: 0.1rem;
 }
+
 .layer .tab .activited {
   color: #1677ff;
 }

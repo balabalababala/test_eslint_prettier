@@ -6,6 +6,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "lint:css": "stylelint 'src/**/*.css' --fix",
     "lint:script": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:format:script": "eslint --fix --ext  .ts,.tsx,.js,.jsx ."
   },
@@ -144,6 +145,12 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.3.2",
+    "stylelint": "^14.1.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0",
     "typescript": "^4.4.2"
+  },
+  "npm": {
+    "mode":"yarn"
   }
 }
